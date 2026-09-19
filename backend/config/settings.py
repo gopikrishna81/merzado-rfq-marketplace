@@ -79,6 +79,11 @@ DATABASES = {
         "PASSWORD": os.getenv("MYSQL_PASSWORD"),
         "HOST": os.getenv("MYSQL_HOST"),
         "PORT": os.getenv("MYSQL_PORT", "3306"),
+        "OPTIONS": {
+            "ssl": {
+                "ssl_mode": "REQUIRED",
+            },
+        },
     }
 }
 
